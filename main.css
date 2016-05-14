@@ -134,6 +134,11 @@ footer {
   line-height: 1%;
   text-align: center;
   font-family: 'quicksandbold';
+  color: #FFFFFF;
+  background-color: #FFFFFF;
+}
+
+.rightFooter {
   color: #AA8C2C;
   background-color: #AA8C2C;
 }
@@ -188,6 +193,10 @@ footer {
 .color5 {
   background-color: #383838;
   color: #383838;
+}
+
+.eraserColor {
+  background-color: #e5d9dc;
 }
 
 img {
