@@ -5,6 +5,8 @@ var newPixel;
 var canvas = document.getElementsByClassName('pixelGrid')[0];
 var getColor = document.getElementsByTagName('aside')[0];
 var currentColor = 'color1';
+var getTool = document.getElementsByTagName('aside')[1];
+var currentTool = 'pixelTool';
 var colorIndicator = document.getElementsByTagName('footer')[0];
 var isMouseDown = false;
 var mouseX = 0;
@@ -96,6 +98,34 @@ var colorOn = function(event) {
   }
 }
 
+// TOOL PICKER FUNCTION
+var chooseTool = function(event) {
+  if (event.target.className.indexOf('pixelTool') > -1) {
+    currentTool = 'pixelTool' + ' tool';
+    canvas.addEventListener('click', colorOn);
+    canvas.removeEventListener("mousedown", startTrackMouse);
+    window.removeEventListener("mouseup", stopTrackMouse);
+    canvas.removeEventListener("mousemove", trackMouse);
+    console.log(currentTool);
+  }
+  if (event.target.className.indexOf('penTool') > -1) {
+    currentTool = 'penTool' + ' tool';
+    canvas.addEventListener("mousedown", startTrackMouse);
+    window.addEventListener("mouseup", stopTrackMouse);
+    canvas.addEventListener("mousemove", trackMouse);
+    canvas.removeEventListener('click', colorOn);
+    console.log(currentTool);
+  }
+  if (event.target.className.indexOf('knobTool') > -1) {
+    currentTool = 'knobTool' + ' tool';
+    console.log(currentTool);
+  }
+  if (event.target.className.indexOf('eraserTool') > -1) {
+    currentTool = 'eraserTool' + ' tool';
+    console.log(currentTool);
+  }
+}
+
 // MOUSE MOVEMENT FUNCTIONS
 var startTrackMouse = function (event) {
     isMouseDown = true;
@@ -120,8 +150,6 @@ var stopTrackMouse = function() {
 
 
 document.addEventListener('DOMContentLoaded', addPixels);
-canvas.addEventListener('mousedown', colorOn);
+canvas.addEventListener('click', colorOn);
 getColor.addEventListener('click', chooseColor);
-canvas.addEventListener("mousedown", startTrackMouse);
-window.addEventListener("mouseup", stopTrackMouse);
-canvas.addEventListener("mousemove", trackMouse);
+getTool.addEventListener('click', chooseTool);
