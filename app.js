@@ -178,6 +178,7 @@ var stopTrackMouse = function() {
   isMouseDown = false;
 }
 
+// INFO BOX FUNCTIONS
 var pixelBoxShow = function() {
     pixelInfo.style.visibility = 'visible';
 }
