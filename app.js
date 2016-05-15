@@ -12,8 +12,6 @@ var getTool = document.getElementsByTagName('aside')[1];
 var currentTool = 'pixelTool';
 var saveButton = document.getElementsByClassName('saveButton')[0];
 var isMouseDown = false;
-var mouseX = 0;
-var mouseY = 0;
 var body = document.querySelector('body');
 var pixelTool = document.getElementById('pixelTool');
 var pixelInfo = document.getElementById('pixelToolBox');
@@ -160,18 +158,11 @@ var saveCanvas = function() {
 // MOUSE MOVEMENT FUNCTIONS
 var startTrackMouse = function (event) {
     isMouseDown = true;
-
-    mouseX = event.offsetX;
-    mouseY = event.offsetY;
-    colorOn(event);
 }
 
 var trackMouse = function (event) {
-    if (isMouseDown) {
-    mouseX = event.offsetX;
-    mouseY = event.offsetY;
+    if (isMouseDown)
     colorOn(event);
-  }
 }
 
 var stopTrackMouse = function() {
