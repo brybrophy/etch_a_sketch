@@ -224,6 +224,52 @@ img {
   margin-bottom: 40px;
 }
 
+.box {
+  position: absolute;
+  width: 200px;
+  border: 3px solid grey;
+  border-radius: 5px;
+  text-align: center;
+  font-family: 'quicksandbold';
+  color: grey;
+  background-color: white;
+  box-shadow: 3px 3px 10px 3px rgba(0, 0, 0, 0.3);
+  left: 1175px;
+  visibility: hidden;
+}
+
+.pixelToolBox {
+  top: 90px;
+}
+
+.penToolBox {
+  top: 185px;
+}
+
+.knobToolBox {
+  top: 280px;
+}
+
+.eraserToolBox {
+  top: 360px;
+}
+
+.saveToolBox {
+  top: 470px;
+}
+
+.logo {
+  position: absolute;
+  font-family: 'qwigleyregular';
+  font-size: 60px;
+  color: #AA8C2C;
+  left: 523px;
+  text-align: center;
+  letter-spacing: 6px;
+  top: -10px;
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.8), -1px -1px 2px rgba(240, 227, 188, 0.8);
+}
+
 
 @font-face {
     font-family: 'quicksandbold';
@@ -231,4 +277,13 @@ img {
          url('fonts/quicksand-bold-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
+}
+
+@font-face {
+    font-family: 'qwigleyregular';
+    src: url('fonts/qwigley-regular-webfont.woff2') format('woff2'),
+         url('fonts/qwigley-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
 }

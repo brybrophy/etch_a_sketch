@@ -51,24 +51,46 @@
           <header>
             <p>Choose<br>Drawing Method</p>
           </header>
-          <div class="pixelTool tool">
+          <div id="pixelTool" class="pixelTool tool">
           </div>
           <div class="penTool tool">
-            <img class="penTool" src="pen.png">
+            <img id="penTool" class="penTool" src="pen.png">
           </div>
           <div class="knobTool tool">
-            <img src="knob.png">
+            <img id="knobTool" class="knobTool" src="knob.png">
           </div>
           <div class="eraserTool tool">
-            <img class="eraserTool" src="eraser.png">
+            <img id="eraserTool" class="eraserTool" src="eraser.png">
           </div>
           <div class="saveButton tool">
-            <img src="save.png">
+            <img id="saveTool" class="saveTool" src="save.png">
           </div>
           <footer class="rightFooter"><p>Current Tool</p></footer>
         </aside>
-        <canvas>
-        </canvas>
+        <div class="pixelToolBox box" id="pixelToolBox">
+          <p><u>Pixel Tool</u></p>
+          <p>Click to select pixels one at a time.</p>
+        </div>
+        <div class="penToolBox box" id="penToolBox">
+          <p><u>Pencil Tool</u></p>
+          <p>Click and drag to select multiple pixels at a time.</p>
+        </div>
+        <div class="knobToolBox box" id="knobToolBox">
+          <p><u>Knob Tool</u></p>
+          <p>This tool has not been implimented yet.</p>
+        </div>
+        <div class="eraserToolBox box" id="eraserToolBox">
+          <p><u>Eraser Tool</u></p>
+          <p>Click and drag to set pixles back to the default color.</p>
+        </div>
+        <div class="saveToolBox box" id="saveToolBox">
+          <p><u>Save Tool</u></p>
+          <p>This tool has not been implimented yet.</p>
+        </div>
+        <div class="logo">
+          <p>Etch A Sketch 2.0</p>
+        </div>
+    <script src="hammer.js"></script>
     <script src="app.js"></script>
   </body>
 </html>

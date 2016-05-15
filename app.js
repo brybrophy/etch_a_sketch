@@ -14,7 +14,17 @@ var saveButton = document.getElementsByClassName('saveButton')[0];
 var isMouseDown = false;
 var mouseX = 0;
 var mouseY = 0;
-
+var body = document.querySelector('body');
+var pixelTool = document.getElementById('pixelTool');
+var pixelInfo = document.getElementById('pixelToolBox');
+var penTool = document.getElementById('penTool');
+var penInfo = document.getElementById('penToolBox');
+var knobTool = document.getElementById('knobTool');
+var knobInfo = document.getElementById('knobToolBox');
+var eraserTool = document.getElementById('eraserTool');
+var eraserInfo = document.getElementById('eraserToolBox');
+var saveTool = document.getElementById('saveTool');
+var saveInfo = document.getElementById('saveToolBox');
 
 
 // PIXEL CREATION FUNCTION
@@ -168,11 +178,59 @@ var stopTrackMouse = function() {
   isMouseDown = false;
 }
 
+var pixelBoxShow = function() {
+    pixelInfo.style.visibility = 'visible';
+}
 
+var pixelBoxHide = function() {
+  pixelInfo.style.visibility = 'hidden';
+}
+
+var penBoxShow = function() {
+    penInfo.style.visibility = 'visible';
+}
+
+var penBoxHide = function() {
+    penInfo.style.visibility = 'hidden';
+}
+
+var knobBoxShow = function() {
+    knobInfo.style.visibility = 'visible';
+}
+
+var knobBoxHide = function() {
+    knobInfo.style.visibility = 'hidden';
+}
+
+var eraserBoxShow = function() {
+    eraserInfo.style.visibility = 'visible';
+}
+
+var eraserBoxHide = function() {
+    eraserInfo.style.visibility = 'hidden';
+}
+
+var saveBoxShow = function() {
+    saveInfo.style.visibility = 'visible';
+}
+
+var saveBoxHide = function() {
+    saveInfo.style.visibility = 'hidden';
+}
 
 document.addEventListener('DOMContentLoaded', addPixels);
 pixelCanvas.addEventListener('click', colorOn);
 getColor.addEventListener('click', chooseColor);
 getTool.addEventListener('click', chooseColor);
 getTool.addEventListener('click', chooseTool);
+pixelTool.addEventListener('mouseenter', pixelBoxShow);
+pixelTool.addEventListener('mouseleave', pixelBoxHide);
+penTool.addEventListener('mouseenter', penBoxShow);
+penTool.addEventListener('mouseleave', penBoxHide);
+knobTool.addEventListener('mouseenter', knobBoxShow);
+knobTool.addEventListener('mouseleave', knobBoxHide);
+eraserTool.addEventListener('mouseenter', eraserBoxShow);
+eraserTool.addEventListener('mouseleave', eraserBoxHide);
+saveTool.addEventListener('mouseenter', saveBoxShow);
+saveTool.addEventListener('mouseleave', saveBoxHide);
 saveButton.addEventListener('click', saveCanvas);
