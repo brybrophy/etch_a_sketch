@@ -162,7 +162,7 @@ var startTrackMouse = function (event) {
 
 var trackMouse = function (event) {
     if (isMouseDown)
-
+    colorOn(event);
 }
 
 var stopTrackMouse = function() {
