@@ -97,10 +97,13 @@ section {
 }
 
 aside {
-  position: absolute;
+  position: fixed;
   border: 3px solid grey;
   border-radius: 5px;
   box-shadow: 3px 3px 10px 3px rgba(0, 0, 0, 0.3);
+  width: 92px;
+  height: 606px;
+  top: 90px;
 }
 
 .left {
@@ -239,7 +242,7 @@ img {
 }
 
 .pixelToolBox {
-  top: 90px;
+  top: 100px;
 }
 
 .penToolBox {
